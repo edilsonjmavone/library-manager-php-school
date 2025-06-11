@@ -1,0 +1,39 @@
+/* global.css - dark minimalist theme */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(255, 183, 77, 0.1);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.fas.fa-book {
+  animation: bounce 2s infinite;
+}
+
+a {
+  color: #e09e37;
+}
