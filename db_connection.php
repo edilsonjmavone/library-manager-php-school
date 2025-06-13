@@ -1,11 +1,12 @@
 <?php
+require_once "config.php";
 
 $db = mysqli_connect(
-    "localhost",
-    "admin",
-    "dev.js",
-    "lib_manager",
-    3307
+    DB_HOST,
+    DB_USER,
+    DB_PASS,
+    DB_NAME,
+    DB_PORT
 );
 
 if ($db->connect_error) {
