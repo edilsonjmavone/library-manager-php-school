@@ -1,0 +1,149 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+/*
+body {
+background: url("../public/abstract-blur-beautiful-luxury-shopping-mall-center.jpg")
+no-repeat center fixed;
+} */
+
+.dashboard-header {
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  color: #ffb74d;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  color: #ffb74d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card:hover {
+  background-color: #333;
+}
+.pop-card {
+  opacity: 0;
+  transition: opacity 0.3s ease, backdrop-filter 0.9s ease;
+  pointer-events: none;
+}
+
+.pop-card:popover-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #3333332e;
+  backdrop-filter: blur(0.5rem);
+
+  opacity: 1;
+  pointer-events: auto;
+}
+.pop-card-content {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  color: #ffb74d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ensures even spacing from top to bottom */
+  align-items: center;
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.pop-card-content .title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.pop-card-content a {
+  display: inline-block;
+  color: #fff;
+  background-color: #ffb74d;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pop-card-content a:hover {
+  background-color: #ffa726;
+  text-decoration: none;
+}
+
+.exitBtn {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exitBtn:hover {
+  background-color: #e55a5a;
+  transform: scale(1.03);
+}
+
+.exitBtn:active {
+  transform: scale(0.97);
+}
+
+.logout {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.logout a {
+  display: inline-block;
+  color: #fff;
+  background-color: #ff6b6b;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout a:hover {
+  background-color: #e55a5a;
+  text-decoration: none;
+}

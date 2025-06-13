@@ -18,7 +18,7 @@ create table book(
     status enum('available', 'borrowed') DEFAULT 'available',
     genre varchar(100),
     author_id int,
-    publication_date Date, -- not yet
+    publication_date Date, 
     FOREIGN KEY (author_id) REFERENCES author(id)
 );
 
@@ -41,5 +41,6 @@ CREATE TABLE borrowed_book(
 -- insertions
 
 INSERT into user (email, pwdHash, role) values ('admin@mail.com', 'hash', 'admin');
-
-alter table add user_name
+-- modifications
+alter table user add user_name varchar(50);
+alter table book add publication_date Date not null;

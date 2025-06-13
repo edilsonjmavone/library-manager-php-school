@@ -14,7 +14,8 @@
     <main>
         <form action="../controllers/addUserHandler.php" method="post">
             <div style="text-align: center; margin-bottom: 0.5rem;">
-                <i class="fas fa-book" style="font-size: 2rem; color: #ffb74d;"></i>
+            <i class="fas fa-user-plus" style="font-size: 2rem; color: #ffb74d;"></i>
+
             </div>
             <h1>Registar Usuario</h1>
 

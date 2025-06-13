@@ -61,6 +61,30 @@ button:hover {
   text-align: center;
 }
 
+select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #eee;
+  appearance: none; /* Removes default arrow in most browsers */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffb74d' d='M7 10L0.0717968 0.5H13.9282L7 10Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px 8px;
+}
+
+select:hover {
+  border-color: #ffb74d;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ffb74d;
+  background-color: #333;
+}
+
 form {
   animation: fadeIn 0.5s ease-in;
 }

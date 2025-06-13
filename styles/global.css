@@ -37,3 +37,36 @@ main {
 a {
   color: #e09e37;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  color: #eee;
+}
+
+th,
+td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+th {
+  background-color: #2e2e2e;
+  color: #ffb74d;
+}
+
+a.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffb74d;
+  color: #1e1e1e;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+a.btn:hover {
+  background-color: #e09e37;
+}
