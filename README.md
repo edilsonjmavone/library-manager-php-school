@@ -31,6 +31,7 @@ define(
 ## 🛢️ Conexão com a Base de Dados
 
 - Certifique-se de configurar corretamente as credenciais de acesso à base de dados no arquivo `config.php`:
+
   ```php
   <?php
   define('DB_HOST', 'localhost');
@@ -40,12 +41,13 @@ define(
   //... resto do código
   ?>
   ```
+
 - Crie a base de dados e as tabelas necessárias utilizando os scripts SQL fornecidos no ficheiro `db_schema.sql`.
 - Verifique se o servidor MySQL está em execução antes de iniciar o projeto.
 
 ---
 
-# 📝 TODO – Sistema de Gestão Bibliotecário
+## 📝 TODO – Sistema de Gestão Bibliotecário
 
 ### 🔐 Login e Administração
 

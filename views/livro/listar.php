@@ -53,7 +53,7 @@ $result = $db->query($query);
                                 <?php endif; ?>
 
                                 <?php if ($row['status'] === 'available'): ?>
-                                    <a href="emprestar.php?id=<?= $row['id'] ?>" class="borrow">Emprestar</a>
+                                    <a href="borrowBookHandler.php?bookID=<?= $row['id'] ?>" class="borrow">Emprestar</a>
                                 <?php endif; ?>
                             </td>
 
