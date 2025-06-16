@@ -63,7 +63,6 @@ $backTo = $_GET['backTo'] ?? '/views/dashboard.php';
         <h2><?= $success ? 'Sucesso' : 'Erro' ?></h2>
         <p><?= htmlspecialchars($success ?? $error) ?></p>
     </div>
-
     <a href="<?= htmlspecialchars($backTo) ?>">← Voltar</a>
 
 </body>

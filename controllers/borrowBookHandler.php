@@ -9,7 +9,7 @@ $useID = $_SESSION['user_id'];
 
 
 if (empty($bookID)) {
-    redirect("/views/registarUsuario.php?error=Preencha todos os campos");
+    redirect("/views/dashboard.php");
 }
 
 $pwdHash = password_hash($password, PASSWORD_DEFAULT, );
