@@ -3,7 +3,7 @@ require_once '../config.php';
 
 $success = $_GET['successMsg'] ?? null;
 $error = $_GET['errMsg'] ?? null;
-$backTo = $_GET['backTo'] ?? '/views/dashboard.php';
+$backTo = $_GET['backTo'] ?? 'dashboard.php';
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +63,8 @@ $backTo = $_GET['backTo'] ?? '/views/dashboard.php';
         <h2><?= $success ? 'Sucesso' : 'Erro' ?></h2>
         <p><?= htmlspecialchars($success ?? $error) ?></p>
     </div>
-    <a href="<?= htmlspecialchars($backTo) ?>">← Voltar</a>
+    <a href="<?= htmlspecialchars(BASE_URL . ltrim($backTo, '/')) ?>">← Voltar</a>
+
 
 </body>
 

@@ -5,6 +5,7 @@ require_once '../../config.php';
 session_start();
 
 $result = $db->query("SELECT id, name FROM author");
+$user = $result->fetch_assoc();
 
 ?>
 
@@ -22,37 +23,18 @@ $result = $db->query("SELECT id, name FROM author");
 
 <body>
     <main>
-
-        <form action="<?= BASE_URL ?>/controllers/addBookHandler.php" method="post">
+        <form action="<?= BASE_URL ?>/controllers/addAuthorHandler.php" method="post">
             <!-- Inside the <form>, above the <h1> -->
             <div style="text-align: center; margin-bottom: 0.5rem;">
                 <i class="fas fa-book" style="font-size: 2rem; color: #ffb74d;"></i>
             </div>
 
+            <h1>Registar Autor</h1>
 
-            <h1>Registar Livro</h1>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required />
 
-            <label for="title">Titulo</label>
-            <input type="text" id="title" name="title" required />
-
-            <label for="genre">Genero</label>
-            <input type="text" name="genre" id="genre" required>
-
-            <label for="author">Autor</label>
-            <select name="author_id" id="author_id">
-                <option value="" disabled selected hidden>Selecione o Author</option>
-                <?php
-                while ($row = $result->fetch_assoc()) {
-                    $authorId = $row['id'];
-                    $authorName = $row['name'];
-                    echo "<option value='$authorId'>$authorName</option>";
-                } ?>
-            </select>
-
-            <label for="publication_date">Data de Publicacao</label>
-            <input type="date" name="publication_date" id="publication_date">
-
-            <button type="submit">Adicionar</button>
+            <button type="submit">Adicionar Autor</button>
 
             <?php if (isset($_GET['error'])): ?>
                 <p class="error"><?php echo htmlspecialchars($_GET['error']); ?></p>

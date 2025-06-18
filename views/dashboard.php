@@ -25,12 +25,22 @@ $isAdmin = $_SESSION['user_role'] === 'admin';
             <h1>Bem-vindo, <?= htmlspecialchars($_SESSION['user_name'] ?? 'Utilizador') ?>!</h1>
             <p>Gerencie livros, autores e utilizadores a partir deste painel.</p>
         </section>
+
         <section popover id="book" class="pop-card">
             <div class="pop-card-content">
                 <h2 class="title">Livros</h2>
                 <a href="livro/registar.php">Adicionar Livro</a>
                 <a href="<?= BASE_URL ?>/views/livro/listar.php">Listar Livros</a>
                 <button popovertarget="book" popovertargetaction="hide" class="exitBtn">Sair</button>
+            </div>
+        </section>
+
+        <section popover id="author" class="pop-card">
+            <div class="pop-card-content">
+                <h2 class="title">Autores</h2>
+                <a href="<?= BASE_URL ?>/views/autor/registar.php">Adicionar Autor</a>
+                <a href="<?= BASE_URL ?>/views/autor/listar.php">Listar Autores</a>
+                <button popovertarget="author" popovertargetaction="hide" class="exitBtn">Sair</button>
             </div>
         </section>
 

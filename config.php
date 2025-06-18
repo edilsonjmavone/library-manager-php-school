@@ -1,11 +1,18 @@
 <?php
-$confi = parse_ini_file("config.ini");
+$configPath = __DIR__ . '/config.ini'; 
+
+if (file_exists($configPath)) {
+    $confi = parse_ini_file($configPath);
+} else {
+    $confi = []; 
+}
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'lib_manager');
 define('DB_USER', 'admin');
 define('DB_PASS', 'dev.js');
-define('DB_PORT', $confi['DB_PORT'] ? $confi['DB_PORT'] : 3306);
+define('DB_PORT', $confi['DB_PORT'] ?? 3306);
+
 
 define(
     'BASE_URL',

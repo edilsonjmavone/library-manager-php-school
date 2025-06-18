@@ -68,6 +68,7 @@ define(
 ### 👥 Gestão de Utilizadores
 
 - [x] Formulário para adicionar utilizador
+ <!-- Admin -->
 - [ ] Formulário para editar utilizador
 - [ ] Link para eliminar utilizador
 - [ ] Listagem de utilizadores
@@ -78,8 +79,8 @@ define(
 
 - [x] Formulário para adicionar livro
 - [x] Pagina para listar livros
-- [ ] Formulário para editar livro
-- [ ] Formulário para emprestar livro a utilizador
+- [x] Formulário para editar livro
+<!--- [ ] Formulário para emprestar livro a utilizador   Not necessary-->
 - [ ] Listar livros emprestados com datas e utilizadores
 - [ ] Link para devolver livro (actualizar status)
 

@@ -55,3 +55,16 @@ alter table book add copies int,
 
 
 
+SELECT 
+    b.id, 
+    b.title, 
+    b.genre, 
+    a.name AS author, 
+    b.publication_date,
+    b.status,
+    b_b.borrow_date as 'Borrow Date'
+FROM book b 
+LEFT JOIN author a ON b.author_id = a.id
+LEFT JOIN borrowed_book b_b ON b.id = b_b.book_id
+WHERE b_b.user_id = 2
+  AND b_b.return_date IS NULL;

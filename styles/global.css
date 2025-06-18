@@ -15,8 +15,9 @@ main {
   border: 1px solid #2a2a2a;
   border-radius: 8px;
   padding: 2rem;
-  width: 100%;
-  max-width: 400px;
+  width: fit-content;
+  min-width: 650px;
+  max-width: 1300px;
   box-shadow: 0 0 10px rgba(255, 183, 77, 0.1);
 }
 
@@ -55,6 +56,7 @@ td {
 th {
   background-color: #2e2e2e;
   color: #ffb74d;
+  text-align: center;
 }
 
 a.btn {
