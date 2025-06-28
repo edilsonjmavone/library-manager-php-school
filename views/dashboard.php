@@ -38,11 +38,21 @@ $isAdmin = $_SESSION['user_role'] === 'admin';
         <section popover id="author" class="pop-card">
             <div class="pop-card-content">
                 <h2 class="title">Autores</h2>
-                <a href="<?= BASE_URL ?>/views/autor/registar.php">Adicionar Autor</a>
-                <a href="<?= BASE_URL ?>/views/autor/listar.php">Listar Autores</a>
+                <a href="<?= url("/views/autor/registar.php") ?>">Adicionar Autor</a>
+                <a href="<?= url("/views/autor/listar.php") ?>">Listar Autores</a>
                 <button popovertarget="author" popovertargetaction="hide" class="exitBtn">Sair</button>
             </div>
         </section>
+
+        <section popover id="user" class="pop-card">
+            <div class="pop-card-content">
+                <h2 class="title">Utilizadores</h2>
+                <a href="user/adicionar.php">Adicionar Utilizadores</a>
+                <a href="<?= url("/views/user/listar.php") ?>">Listar Utilizadores</a>
+                <button popovertarget="user" popovertargetaction="hide" class="exitBtn">Sair</button>
+            </div>
+        </section>
+
 
         <section class=" card-grid">
             <button popovertarget="book" class="card">📚 Livros</button>

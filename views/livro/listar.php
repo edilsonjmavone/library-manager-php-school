@@ -1,4 +1,7 @@
 <?php
+
+use Soap\Url;
+
 require_once '../../db_connection.php';
 require_once '../../config.php';
 
@@ -69,15 +72,15 @@ $result = $stmt->get_result();
                             <td class="book-actions">
                                 <?php if ($isAdmin): ?>
                                     <a href="editar.php?id=<?= $row['id'] ?>" class="edit">Editar</a>
-                                    <a href="apagar.php?id=<?= $row['id'] ?>" class="delete">Apagar</a>
+                                    <a href="<?= url("/controllers/deleteBook.php")?>?id=<?= $row['id'] ?>" class="delete">Apagar</a>
                                 <?php endif; ?>
 
                                 <?php if ($row['availability'] === 'available'): ?>
-                                    <a href="<?= BASE_URL ?>/controllers/borrowBookHandler.php?bookID=<?= $row['id'] ?>"
+                                    <a href="<?= url("/controllers/borrowBookHandler.php") ?>?bookID=<?= $row['id'] ?>"
                                         class="borrow">Requisitar</a>
 
                                 <?php elseif ($row['user_borrow_status'] === 'borrowed_by_user'): ?>
-                                    <a href="<?= BASE_URL ?>/controllers/returnBookHandler.php?bookID=<?= $row['id'] ?>"
+                                    <a href="<?= url("/controllers/returnBookHandler.php") ?>?bookID=<?= $row['id'] ?>"
                                         class="return">Devolver</a>
 
                                 <?php else: ?>

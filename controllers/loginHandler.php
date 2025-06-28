@@ -4,6 +4,8 @@ require_once '../config.php';
 
 session_start();
 
+$_COOKIE["theme"] = "white";
+
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 
@@ -30,6 +32,9 @@ $_SESSION['user_id'] = $user['id'];
 $_SESSION['user_email'] = $user['email'];
 $_SESSION['user_role'] = $user['role'];
 $_SESSION['user_name'] = $user['user_name'];
+
+
+
 
 
 redirect("/views/dashboard.php");
