@@ -9,9 +9,9 @@ if (file_exists($configPath)) {
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'lib_manager');
-define('DB_USER', 'admin');
-define('DB_PASS', 'dev.js');
-define('DB_PORT', $confi['DB_PORT'] ?? 3306);
+define('DB_USER', 'root');
+define('DB_PASS', 'mbaila');
+define('DB_PORT', $confi['DB_PORT'] ?? 3307);
 
 define('BASE_URL', '/phpmodule/library-manager-php');
 
@@ -49,7 +49,6 @@ function showMessage(string $type, string $msg, string $backTo = "/views/dashboa
     $url = "/views/message.php?$param=" . urlencode($msg) . "&backTo=" . urlencode($backTo);
     redirect($url);
 }
+
 ?>
 
-
-<!-- ctrl+shift+G -->

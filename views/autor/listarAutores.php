@@ -69,7 +69,6 @@ $result = $db->query($query);
                             <?php if ($isAdmin): ?>
                                 <td class="book-actions">
                                     <a href="editar.php?id=<?= $row['id'] ?>" class="edit">✏️ Editar</a>
-                                    
                                     <a href="<?= url("/controllers/deleteAuthorHandler.php") ."?id=". $row['id'] ?>" class="delete" onclick="return confirm('Tem certeza que deseja remover este autor?')">🗑️ Remover</a>
                                     <a href="<?= BASE_URL ?>/views/livro/porAutor.php?autor_id=<?= $row['id'] ?>" class="view">📚 Ver Livros</a>
 

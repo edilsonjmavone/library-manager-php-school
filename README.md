@@ -57,11 +57,11 @@ define(
   - [x] Lógica de autenticação (verificar `username` + `password_hash`)
   - [x] Gestão de sessão e redirecionamento por função (admin/user)
 
-- [ ] Página de Administração (Dashboard)
+- [x] Página de Administração (Dashboard)
 
-  - [ ] Mostrar overview da de actividades (emprestimos de livros) e quantidades
+  - [x] Mostrar overview da de actividades (emprestimos de livros) e quantidades
 
-- [ ] Exibir resumo geral: total de livros, autores, empréstimos, etc.
+- [x] Exibir resumo geral: total de livros, autores, empréstimos, etc.
 
 ---
 
@@ -69,9 +69,9 @@ define(
 
 - [x] Formulário para adicionar utilizador
  <!-- Admin -->
-- [ ] Formulário para editar utilizador
-- [ ] Link para eliminar utilizador
-- [ ] Listagem de utilizadores
+- [x] Formulário para editar utilizador
+- [x] Link para eliminar utilizador
+- [x] Listagem de utilizadores
 
 ---
 
@@ -81,14 +81,14 @@ define(
 - [x] Pagina para listar livros
 - [x] Formulário para editar livro
 <!--- [ ] Formulário para emprestar livro a utilizador   Not necessary-->
-- [ ] Listar livros emprestados com datas e utilizadores
-- [ ] Link para devolver livro (actualizar status)
+- [x] Listar livros emprestados com datas e utilizadores
+- [x] Link para devolver livro (actualizar status)
 
 ---
 
 ### ✍️ Gestão de Autores
 
-- [ ] Formulário para adicionar autor
-- [ ] Formulário para editar autor
-- [ ] Link para eliminar autor
-- [ ] Página para listar livros por autor
+- [x] Formulário para adicionar autor
+- [x] Formulário para editar autor
+- [x] Link para eliminar autor
+- [x] Página para listar livros por autor

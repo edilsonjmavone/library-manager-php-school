@@ -39,21 +39,35 @@ $isAdmin = $_SESSION['user_role'] === 'admin';
         <section popover id="author" class="pop-card">
             <div class="pop-card-content">
                 <h2 class="title">Autores</h2>
+
                 <a href="<?= url("/views/autor/registar.php") ?>">Adicionar Autor</a>
                 <a href="<?= url("/views/autor/listar.php") ?>">Listar Autores</a>
+
                 <button popovertarget="author" popovertargetaction="hide" class="exitBtn">Sair</button>
             </div>
         </section>
+
+
 
         <section popover id="user" class="pop-card">
             <div class="pop-card-content">
                 <h2 class="title">Utilizadores</h2>
                 <a href="user/adicionar.php">Adicionar Utilizadores</a>
                 <a href="<?= url("/views/user/listar.php") ?>">Listar Utilizadores</a>
+
                 <button popovertarget="user" popovertargetaction="hide" class="exitBtn">Sair</button>
             </div>
         </section>
 
+
+          <section popover id="borrow" class="pop-card">
+            <div class="pop-card-content">
+                <h2 class="title">Emprestimos</h2>
+                <a href="livro/addEmprestimo.php">Adicionar Emprestimo</a>
+                <a href="<?= url("/views/livro/listarEmprestados.php") ?>">Listar Emprestimos</a>
+                <button popovertarget="borrow" popovertargetaction="hide" class="exitBtn">Sair</button>
+            </div>
+          </section>
 
         <section class=" card-grid">
             <button popovertarget="book" class="card">📚 Livros</button>
@@ -61,6 +75,29 @@ $isAdmin = $_SESSION['user_role'] === 'admin';
             <button popovertarget="user" class="card">👥 Utilizadores</button>
             <button popovertarget="borrow" class="card">📖 Empréstimos</button>
         </section>
+
+        <?php if ($isAdmin): ?>
+<section popover id="admin" class="pop-card">
+    <div class="pop-card-content">
+        <h2 class="title">Administração</h2>
+        <a href="<?= BASE_URL ?>/views/admin/dashboard.php">📊 Ver Estatísticas</a>
+        <button popovertarget="admin" popovertargetaction="hide" class="exitBtn">Sair</button>
+    </div>
+</section>
+<?php endif; ?>
+
+            <section class="card-grid">
+    <button popovertarget="book" class="card">📚 Livros</button>
+    <button popovertarget="author" class="card">✍️ Autores</button>
+    <button popovertarget="user" class="card">👥 Utilizadores</button>
+    <button popovertarget="borrow" class="card">📖 Empréstimos</button>
+
+    <?php if ($isAdmin): ?>
+        <button popovertarget="admin" class="card">📊 Administração</button>
+    <?php endif; ?>
+</section>
+
+        
 
         <div class="logout">
             <a href="../controllers/logoutHandler.php">⏏️ Terminar sessão</a>
