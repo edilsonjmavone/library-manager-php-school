@@ -50,3 +50,6 @@ function showMessage(string $type, string $msg, string $backTo = "/views/dashboa
     redirect($url);
 }
 ?>
+
+
+<!-- ctrl+shift+G -->

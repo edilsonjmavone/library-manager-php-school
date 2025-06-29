@@ -30,7 +30,7 @@ $booksResult = $stmtBooks->get_result();
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt">    
 
 <head>
     <meta charset="UTF-8" />
@@ -158,6 +158,8 @@ $booksResult = $stmtBooks->get_result();
                                     } else {
                                         echo htmlspecialchars($book['state']);
                                     }
+
+
                                     ?>
                                 </td>
                             </tr>
