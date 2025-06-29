@@ -9,14 +9,14 @@ if (file_exists($configPath)) {
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'lib_manager');
-define('DB_USER', 'admin');
-define('DB_PASS', 'dev.js');
-define('DB_PORT', $confi['DB_PORT'] ?? 3306);
+define('DB_USER', 'root');
+define('DB_PASS', 'mbaila');
+define('DB_PORT', $confi['DB_PORT'] ?? 3307);
 
 
 define(
     'BASE_URL',
-    '/phpmodule/library-manager-php'
+    '/cloned/library-manager-php-school/'
 );
 /**
  * Redireciona para o caminho fornecido 
@@ -41,3 +41,11 @@ function showMessage(string $type, string $msg, string $backTo = "/views/dashboa
     $url = "/views/message.php?$param=" . urlencode($msg) . "&backTo=" . urlencode($backTo);
     redirect($url);
 }
+// function showMessage($type, $message, $redirect = null) {
+//     $_SESSION['flash'] = ['type' => $type, 'message' => $message];
+//     if ($redirect) {
+//         header("Location: $redirect");
+//         exit;
+//     }
+// }
+

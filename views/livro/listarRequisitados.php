@@ -39,7 +39,7 @@ $result = $stmt->get_result();
 
 <body>
     <main>
-        <h1>Lista de Livros</h1>
+        <h1>Lista de Livros Requisitados</h1>
 
         <?php if ($result->num_rows > 0): ?>
             <table>
@@ -49,6 +49,7 @@ $result = $stmt->get_result();
                         <th>Género</th>
                         <th>Autor</th>
                         <th>Data Aquisicao</th>
+                        <th>Disponíveis</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -63,7 +64,7 @@ $result = $stmt->get_result();
                             <td class="book-actions">
                                 <?php if ($isAdmin): ?>
                                     <a href="editar.php?id=<?= $row['id'] ?>" class="edit">Editar</a>
-                                    <a href="apagar.php?id=<?= $row['id'] ?>" class="delete">Apagar</a>
+                                    <a href="removerLivro.php?id=<?= $row['id'] ?>" class="delete">Apagar</a>
                                 <?php endif; ?>
 
                                 <?php if ($row['status'] === 'available'): ?>
@@ -79,6 +80,9 @@ $result = $stmt->get_result();
         <?php else: ?>
             <p>Sem livros registados.</p>
         <?php endif; ?>
+         <div>
+            <a href="<?= BASE_URL ?>/views/livro/listar.php" class="exitBtn">a</a>
+        </div>
     </main>
 </body>
 

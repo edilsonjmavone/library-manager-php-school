@@ -1,5 +1,5 @@
 create database lib_manager;
-
+use lib_manager;
 -- auth related tables
 
 CREATE TABLE user(

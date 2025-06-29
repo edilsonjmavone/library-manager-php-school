@@ -91,6 +91,12 @@ $result = $stmt->get_result();
         <?php else: ?>
             <p>Sem livros registados.</p>
         <?php endif; ?>
+         <div>
+            <a href="<?= BASE_URL ?>/views/dashboard.php" class="exitBtn">Regressar ao dashboard</a>
+        </div>
+         <div>
+            <a href="<?= BASE_URL ?>/views/livro/listarRequisitados.php" class="exitBtn">a</a>
+        </div>
     </main>
 </body>
 

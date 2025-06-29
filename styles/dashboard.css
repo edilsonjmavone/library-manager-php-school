@@ -1,0 +1,58 @@
+/* styles/dashboard.css */
+body {
+    background-color: #101010;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #1c1c1c;
+    border-left: 6px solid #ff6500;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 101, 0, 0.2);
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ff6500;
+}
+
+.card p {
+    margin-top: 0.5rem;
+    color: #aaa;
+}
+
+.exitBtn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background-color: #ff6500;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.exitBtn:hover {
+    background-color: #e05500;
+}
