@@ -3,7 +3,12 @@ require_once '../config.php';
 
 $success = $_GET['successMsg'] ?? null;
 $error = $_GET['errMsg'] ?? null;
-$backTo = $_GET['backTo'] ?? 'dashboard.php';
+$backTo = $_GET['backTo'] ?? '/views/dashboard.php';
+
+// Gerar URLs seguras
+$backUrl = url($backTo);
+$dashboardUrl = url('/views/dashboard.php');
+$retryUrl = $_SERVER['HTTP_REFERER'] ?? $backUrl;
 ?>
 
 <!DOCTYPE html>
@@ -44,15 +49,25 @@ $backTo = $_GET['backTo'] ?? 'dashboard.php';
             ;
         }
 
-        a {
-            color: #ff6500;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .buttons a {
+            background-color: #ff6500;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .buttons a:hover {
+            background-color: #e05500;
         }
     </style>
 </head>
@@ -63,8 +78,16 @@ $backTo = $_GET['backTo'] ?? 'dashboard.php';
         <h2><?= $success ? 'Sucesso' : 'Erro' ?></h2>
         <p><?= htmlspecialchars($success ?? $error) ?></p>
     </div>
-    <a href="<?= htmlspecialchars(BASE_URL . ltrim($backTo, '/')) ?>">← Voltar</a>
 
+    <div class="buttons">
+        <a href="<?= htmlspecialchars($backUrl) ?>">← Voltar</a>
+
+        <?php if ($error): ?>
+            <a href="<?= htmlspecialchars($retryUrl) ?>">🔄 Tentar Novamente</a>
+        <?php endif; ?>
+
+        <a href="<?= htmlspecialchars($dashboardUrl) ?>">🏠 Ir para o Dashboard</a>
+    </div>
 
 </body>
 
