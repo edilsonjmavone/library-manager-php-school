@@ -4,10 +4,22 @@ body {
   color: #e0e0e0;
   font-family: system-ui, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+  /* Remove flex centering */
+  margin: 0;
+  min-height: 100vh;
+  /* maybe add padding for top spacing */
+  padding: 2rem 1rem 4rem;
 }
 
 main {
@@ -73,14 +85,95 @@ a.btn:hover {
   background-color: #e09e37;
 }
 
-
-nav-dock {
+/* Nav Dock */
+.nav-dock {
   background-color: #1e1e1e;
   border: 1px solid #2a2a2a;
   border-radius: 8px;
-  padding: 2rem;
-  width: fit-content;
-  min-width: 650px;
-  max-width: 1300px;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem auto 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  box-shadow: 0 8px 20px rgba(255, 183, 77, 0.2);
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+/* Links */
+.nav-dock a {
+  color: #ffb74d;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-dock a:hover {
+  background-color: #2a2a2a;
+}
+
+.nav-dock a.logout {
+  color: #ef5350;
+}
+
+.nav-dock a.logout:hover {
+  background-color: #2a2a2a;
+}
+
+/* User Dropdown */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-button {
+  background-color: #2a2a2a;
+  color: #ccc;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.user-button:hover {
+  background-color: #333;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1e1e1e;
+  min-width: 160px;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
   box-shadow: 0 0 10px rgba(255, 183, 77, 0.1);
+  z-index: 1;
+  right: 0;
+  margin-top: 0.5rem;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  color: #ccc;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.dropdown-content a:hover {
+  background-color: #2a2a2a;
+}
+
+/* Show dropdown on hover */
+.user-dropdown:hover .dropdown-content {
+  display: flex;
 }

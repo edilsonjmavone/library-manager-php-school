@@ -26,6 +26,7 @@ $isAdmin = $_SESSION['user_role'] === 'admin';
             <p>Gerencie livros, autores e utilizadores a partir deste painel.</p>
         </section>
 
+            <a href="livro/registar.php">Adicionar Livro</a>
         <section popover id="book" class="pop-card">
             <div class="pop-card-content">
                 <h2 class="title">Livros</h2>

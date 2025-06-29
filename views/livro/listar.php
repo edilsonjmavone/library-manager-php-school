@@ -48,6 +48,9 @@ $result = $stmt->get_result();
 </head>
 
 <body>
+
+<?php include_once __DIR__ . '/../../components/navDock.php'; ?>
+
     <main>
         <h1>Lista de Livros</h1>
 
